@@ -3,10 +3,14 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
+  - python=3.11
+  - jupyterlab
+  - jupyterhub-singleuser
   - r-base=4.3
-  - r-irkernel       # Allows running this R notebook in Jupyter
+  - r-irkernel          # Safely include it now so Jupyter registers the R execution engine
   - r-raster
   - r-sf
   - r-rnaturalearth
   - r-maxnet
-  - r-remotes        # Used to safely fetch finbif from CRAN
+  - r-remotes           # Used to safely fetch finbif from CRAN
+
