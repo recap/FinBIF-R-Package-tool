@@ -1,0 +1,12 @@
+name: sdm_finbif_env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - r-base=4.3
+  - r-irkernel       # Allows running this R notebook in Jupyter
+  - r-raster
+  - r-sf
+  - r-rnaturalearth
+  - r-maxnet
+  - r-remotes        # Used to safely fetch finbif from CRAN
