@@ -3,7 +3,7 @@
 set -eux
 conda create \
   -y \
-  --file conda-linux-64.lock \
+  --file binder/conda-linux-64.lock \
   --prefix ${NB_PYTHON_PREFIX}
 conda clean -yaf # clean up downloaded files and indexes
 
