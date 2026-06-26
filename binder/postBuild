@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eux
+conda create \
+  -y \
+  --file binder/conda-linux-64.lock \
+  --prefix ${NB_PYTHON_PREFIX}
+conda clean -yaf # clean up downloaded files and indexes
+
+# Tell the active Conda R instance to download and compile the remaining CRAN tools
+Rscript -e "remotes::install_cran(c('geodata', 'finbif'), repos='https://cloud.r-project.org')"
